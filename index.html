@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Счастливый билет</h1>
+    <script>
+        let number = parseInt(prompt("Ваш билет:", "Введите 6 значное число вашего билета"));
+
+        let first_num = parseInt(number / 100000);
+        let second_num = parseInt((number / 10000) % 10);
+        let third_num = parseInt((number % 1000) % 10);
+
+        let sum_of_first_path = first_num + second_num + third_num;
+
+        let fourth_num = parseInt((number / 100) % 10);
+        let fifth_num = parseInt((number / 10) % 10);
+        let sixth_num = number % 10;
+
+        let sum_of_second_path = fourth_num + fifth_num + sixth_num;
+
+        if (sum_of_first_path == sum_of_second_path) 
+        {
+            alert("Ваш билет - счастливый!")
+        }
+
+        else 
+        {
+            alert("Ваш билет - несчастливый!")
+        }
+    </script>
+</body>
+</html>
